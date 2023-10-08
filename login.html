@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <LINK rel="stylesheet" href="style.css">
+    </LINK>
+    <title>Formulario de Registro</title>
+</head>
+
+<body>
+    <!--Div para crear cuenta nueva-->
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenido</h2>
+                <p>Para entrar a tu clase <br> Inicia sesion con tus datos</p>
+                <input type="button" value="Iniciar Sesion" id="sign-in">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Crear una Cuenta</h2>
+                <div class="icons">
+                    <a href="https://accounts.google.com/InteractiveLogin/identifier?ifkv=AYZoVhfYMT3TPOwt5NGT0n85NDRZW4Pmd0QvR3NKZ4FWYFf3dcYuucV8PvbJJZtaGHhmUo76qfAHMg&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank"><i class='bx bxl-google'></i></a>
+                    <a href="https://github.com/login" target="_blank" rel="noopener noreferrer">  <i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                <p>o usa tu email para registrarte</p>
+                <form class="form" onsubmit="return validarFormulario1()">
+                    <label>
+                        <i class='bx bx-user'></i>
+                        <input type="text" id="txtNombre" placeholder="Nombre Completo">
+                    </label>
+                    <label>
+                        <i class='bx bx-envelope'></i>
+                        <input type="text" id="txtEmail" placeholder="Correo Electronico">
+                    </label>
+                    <label>
+                        <i class='bx bx-phone'></i>
+                        <input type="text" id="txtNumero" placeholder="Numero Telefonico">
+                    </label>
+                    <label>
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" id="txtPassword" placeholder="Contraseña">
+                    </label>
+                    <label>
+                        <i class='bx bx-lock-open-alt'></i>
+                        <input type="password" id="txtPassword2" placeholder="Validar Contraseña">
+                    </label>
+                    <input type="submit" value="Registrarse">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Div para iniciar sesion-->
+    <div class="container-form login hide">
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenido Nuevamente</h2>
+                <p>Para unirte a tu clase <br> Crea una cuenta</p>
+                <input type="button" value="Registrarse" id="sign-up">
+            </div>
+        </div>
+        <div class="form-information" onsubmit="return validarFormulario2()">
+            <div class="form-information-childs">
+                <h2>Iniciar Sesion</h2>
+                <div class="icons">
+                    <a href="https://accounts.google.com/InteractiveLogin/identifier?ifkv=AYZoVhfYMT3TPOwt5NGT0n85NDRZW4Pmd0QvR3NKZ4FWYFf3dcYuucV8PvbJJZtaGHhmUo76qfAHMg&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank"><i class='bx bxl-google'></i></a>
+                    <a href="https://github.com/login" target="_blank" rel="noopener noreferrer">  <i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                <p>o Iniciar Sesion con una cuenta</p>
+                <form class="form">
+                    <label>
+                        <i class='bx bx-envelope'></i>
+                        <input type="text" id="txtCorreo" placeholder="Correo Electronico">
+                    </label>
+                    <label>
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" id="txtContraseña" placeholder="Contraseña">
+                    </label>
+                    <input type="submit" value="Iniciar Sesion">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
